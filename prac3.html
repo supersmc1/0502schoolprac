@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="root"></div>
+
+  <script>
+    const root = document.getElementById("root");
+    // 변수 지정 룻 은 아이디값 룻이다
+    root.style.fontSize = "5rem";
+    // 룻 의 스타일 폰트 사이즈 는 5rem 이다
+    let isStatus = true;
+    // 변수 isStatus 는 참이다 
+    let current = 0;
+    //  변수 current 는 0 이다
+    root.textContent = current;
+    // 룻의 텍스트컨텐트 에 변수지정한 current 를 넣엇다
+    root.addEventListener('click', function () {
+      // 변수 룻의 클릭 이벤트 
+      if (isStatus === true) {
+        // 만약에 isstatus 와 참 이 같으면
+        current++;
+        // current 값을 증가시킨다
+        if (current >= 10) {
+          // 만약에 current 10 보다 크거나 같으면
+          isStatus = false;
+          // isStatus 는 거짓
+        }
+        // ??
+        root.textContent = current;
+        // 룻의 텍스트컨텐트 에 커런트를 넣엇다
+      } else {
+        // 거짓이면
+        current--;
+        // 커런트의 값을 감소시킨다
+        if (current <= 0) {
+          // 만약에 커런트가  0보다 작거나 같으면
+          isStatus = true;
+          // isStatus 는 참
+        }
+        // 
+        root.textContent = current;
+        // 룻의 텍스트 컨텐트 에 커런트를 넣엇다
+      }
+    })
+  </script>
+
+</body>
+
+</html>

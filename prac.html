@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+
+
+  <script>
+    let a = "겜";
+    let b = "블";
+    let c = "러";
+    let originalData ="텀";
+    let text = originalData + b + c ;
+    const root = document.getElementById("root")
+    text = a + b + c
+    //console.dir(root);
+    //console.log(root.textContent[0]);
+    //console.log(root.innerHTML[0]);
+    root.textContent = text;
+    console.log(text[0]);
+
+  </script>
+</body>
+</html>
